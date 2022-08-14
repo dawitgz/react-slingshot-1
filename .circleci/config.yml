@@ -35,8 +35,9 @@ jobs:
       - run: npm i
       - run: npm audit
       - run:
-        command: echo "okay for the audit to fail"
-        when: on_fail
+          name: Audit fail handler
+          command: echo "okay for the audit to fail"
+          when: on_fail
 
 
 workflows:
